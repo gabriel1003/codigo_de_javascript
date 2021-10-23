@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            digite sua nota
+        </title>
+    </head>
+    <body>
+        <h1>
+            Descubra se você passou ou não
+        </h1>
+        <p>
+            Criamos este formulario para você descobrir se foi aprovado ou não.
+        </p>
+        <form name="fnota">
+            <input id="focar-btn" type="text" autocomplete="off" placeholder="digite sua nota" name="nota">
+
+            <br> <br>
+
+            <input type="submit" value="enviar resultado" id="click_button" onclick="formValidation()">
+
+        </form>
+    </body>
+    <script>
+        function formValidation(){
+            const nota = document.fnota.nota.value;
+
+            if (nota >= 0 && nota <= 6){
+                alert("reprovado");
+                document.getElementById("focar-btn").focus();
+            } else if(nota> 6 && nota <= 8){
+                alert("você foi aprovado com a nota minima ");
+                document.getElementById("focar-btn").focus();
+            } else{
+                alert("você foi aprovado");
+                document.getElementById("focar-btn").focus();
+            }
+        }
+    </script>
+</html>
